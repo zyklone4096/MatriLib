@@ -1,5 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 allprojects {
@@ -13,11 +14,14 @@ allprojects {
         maven {
             url='https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
         }
+        maven {
+            url='https://oss.sonatype.org/content/groups/public/'
+        }
     }
 }
 
 group = 'cn.afternode'
-version = '1.0-SNAPSHOT'
+version = '0.1.0'
 
 repositories {
     mavenCentral()
@@ -39,4 +43,20 @@ compileKotlin {
 
 compileTestKotlin {
     kotlinOptions.jvmTarget = '1.8'
+}
+
+shadowJar {
+    dependencies {
+        exclude(dependency('org.spigotmc:spigot-api'))
+        exclude(dependency('org.yaml:snakeyaml'))
+        exclude(dependency('org.jetbrains:annotations'))
+        exclude(dependency('commons-lang:commons-lang'))
+        exclude(dependency('com.google.guava:guava'))
+        exclude(dependency('com.google.code.gson:gson'))
+        exclude(dependency('net.md-5:bungeecord-chat'))
+        exclude(dependency('com.googlecode.json-simple:json-simple:1.1.1'))
+        exclude(dependency('junit:junit'))
+        exclude(dependency('org.hamcrest:hamcrest-library'))
+        exclude(dependency('org.hamcrest:hamcrest-core'))
+    }
 }
