@@ -2,9 +2,11 @@ package cn.afternode.matrlib
 
 import org.bukkit.plugin.java.JavaPlugin
 
-object MatrLib: JavaPlugin() {
-    @JvmStatic
-    val PLATFORMS = 1
+class MatrLib: JavaPlugin() {
+    companion object {
+        @JvmStatic
+        val PLATFORMS = 1
+    }
 
     lateinit var version: String
 
