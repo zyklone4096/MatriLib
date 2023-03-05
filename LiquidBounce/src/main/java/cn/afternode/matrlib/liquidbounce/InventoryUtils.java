@@ -12,16 +12,15 @@ public class InventoryUtils {
             Material.TRAPPED_CHEST,
             Material.ANVIL,
             Material.SAND,
-            Material.COBWEB,
+            Material.WEB,
             Material.TORCH,
-            Material.CRAFTING_TABLE,
             Material.FURNACE,
-            Material.LEGACY_WATER_LILY,
+            Material.WATER_LILY,
             Material.DISPENSER,
-            Material.STONE_PRESSURE_PLATE,
             Material.NOTE_BLOCK,
             Material.DROPPER,
             Material.TNT,
-            Material.REDSTONE_TORCH
+            Material.REDSTONE_TORCH_OFF,
+            Material.REDSTONE_TORCH_ON
     );
 }
