@@ -1,6 +1,8 @@
 ## Open-Source
 
-[LiquidBounce-legacy](https://github.com/CCBlueX/LiquidBounce/tree/legacy)
+[LiquidBounce-legacy](https://github.com/CCBlueX/LiquidBounce/tree/legacy) -> LiquidBounce
+
+[Pride](https://github.com/XItzKanoX/Pride) -> LiquidBounce
 
 ## Deobfuscation
 

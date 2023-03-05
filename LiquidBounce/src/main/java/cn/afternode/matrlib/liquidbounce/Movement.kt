@@ -1,6 +1,7 @@
 package cn.afternode.matrlib.liquidbounce
 
 import org.bukkit.Location
+import org.bukkit.entity.Entity
 import org.bukkit.entity.Player
 import kotlin.math.cos
 import kotlin.math.sin
