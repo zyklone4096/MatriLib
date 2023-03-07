@@ -1,7 +1,6 @@
 package cn.afternode.matrlib.liquidbounce
 
 import cn.afternode.matrilib.core.MotionData
-import org.bukkit.Location
 import org.bukkit.entity.Entity
 import kotlin.math.cos
 import kotlin.math.sin
