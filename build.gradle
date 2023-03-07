@@ -20,6 +20,18 @@ allprojects {
     }
 }
 
+subprojects {
+    sourceSets {
+        main.java.srcDirs += "src/main/java"
+        main.java.srcDirs += "../Core/src/main/java"
+        main.resources.srcDirs += "../Core/src/main/resources"
+    }
+
+    dependencies {
+        implementation project(":Common")
+    }
+}
+
 group = 'cn.afternode'
 version = '0.1.0'
 
@@ -30,6 +42,7 @@ repositories {
 dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 
+    implementation project(":Common")
     implementation project(":LiquidBounce")
 }
 

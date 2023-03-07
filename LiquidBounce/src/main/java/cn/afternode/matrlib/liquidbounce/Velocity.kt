@@ -1,5 +1,6 @@
 package cn.afternode.matrlib.liquidbounce
 
+import cn.afternode.matrilib.core.MotionData
 import org.bukkit.Location
 import org.bukkit.entity.Entity
 import kotlin.math.cos
@@ -14,8 +15,8 @@ object Velocity {
         Feile
     }
 
-    fun calculateVelocity(type: VelocityType, e: Entity): Array<VelocityMotionData> {
-        val list = ArrayList<VelocityMotionData>()
+    fun calculateVelocity(type: VelocityType, e: Entity): Array<MotionData> {
+        val list = ArrayList<MotionData>()
 
         when (type.name) {
             "Jump" -> {
@@ -29,13 +30,14 @@ object Velocity {
         return list.toTypedArray()
     }
 
-    private fun calculateLBVelocity(type: VelocityType, e: Entity): List<VelocityMotionData> {
-        val list = ArrayList<VelocityMotionData>()
+    private fun calculateLBVelocity(type: VelocityType, e: Entity): List<MotionData> {
+        val list = ArrayList<MotionData>()
 
         when (type.name) {
             "Jump" -> {
                 val yaw = e.location.yaw * 0.017453292F
-                list.add(VelocityMotionData(sin(yaw) * 0.2, 0.0, cos(yaw) * 0.2))
+                list.add(MotionData(sin(yaw) * 0.2, 0.0, cos(yaw) * 0.2, e.location))
+
             }
 
         }
@@ -43,21 +45,19 @@ object Velocity {
         return list
     }
 
-    private fun calculatePrideVelocity(type: VelocityType, e: Entity): List<VelocityMotionData> {
-        val list = ArrayList<VelocityMotionData>()
+    private fun calculatePrideVelocity(type: VelocityType, e: Entity): List<MotionData> {
+        val list = ArrayList<MotionData>()
 
         when (type.name) {
             "Feile" -> {
                 if (e.isOnGround) {
-                    list.add(VelocityMotionData(1.5, 1.2, 1.5))
+                    list.add(MotionData(1.5, 1.2, 1.5, e.location))
                 } else {
-                    list.add(VelocityMotionData(0.0,0.0,0.0))
+                    list.add(MotionData(0.0,0.0,0.0, e.location))
                 }
             }
         }
 
         return list
     }
-
-    data class VelocityMotionData(val motionX: Double, val motionY: Double, val motionZ: Double){}
 }
