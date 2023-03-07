@@ -1,4 +1,5 @@
 rootProject.name = 'MatriLib'
 include 'LiquidBounce'
 include 'Common'
+include 'Hypixel'
 
