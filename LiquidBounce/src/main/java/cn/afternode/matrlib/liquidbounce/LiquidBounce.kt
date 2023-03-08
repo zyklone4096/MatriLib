@@ -1,15 +1,13 @@
 package cn.afternode.matrlib.liquidbounce
 
-object LiquidBounce {
-    @JvmStatic
-    val name = "LiquidBounce"
+import cn.afternode.matrilib.core.AbstractPlatform
 
-    @JvmStatic
-    val version = "b76"
+object LiquidBounce: AbstractPlatform() {
+    override val name = "LiquidBounce"
 
-    @JvmStatic
-    val originalAuthor = "CCBlueX"
+    override val version = "b76"
 
-    @JvmStatic
-    val note = "Contains some forks like FDPClient"
+    override val originalAuthor = "CCBlueX"
+
+    override val description = "Contains some forks like FDPClient"
 }
