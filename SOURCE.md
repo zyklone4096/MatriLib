@@ -4,6 +4,10 @@
 [Pride](https://github.com/XItzKanoX/Pride), 
 [FDPClient](https://github.com/SkidderMC/FDPClient)-> LiquidBounce
 
-## Deobfuscation
+## Decompiled
 
 DreamMore(CN) version 230128 -> LiquidBounce
+
+## Leaks
+
+DistanceReborn version 6.0
