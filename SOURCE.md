@@ -6,8 +6,10 @@
 
 ## Decompiled
 
-DreamMore(CN) version 230128 -> LiquidBounce
+**DreamMore(CN)** version 230128 -> **LiquidBounce**
+
+**EnjoyTheBans** version 0.6 -> **Legacy**
 
 ## Leaks
 
-DistanceReborn version 6.0
+**DistanceReborn** version 6.0 -> **Hypixel**
