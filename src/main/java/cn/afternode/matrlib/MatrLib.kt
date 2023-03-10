@@ -9,7 +9,7 @@ class MatrLib: JavaPlugin() {
         val PLATFORMS = 3
 
         @JvmStatic
-        val IN_DEV = false
+        val IN_DEV = true
     }
 
     lateinit var version: String
