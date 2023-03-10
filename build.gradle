@@ -45,6 +45,7 @@ dependencies {
     implementation project(":Common")
     implementation project(":LiquidBounce")
     implementation project(":Hypixel")
+    implementation project(":Legacy")
 }
 
 test {
