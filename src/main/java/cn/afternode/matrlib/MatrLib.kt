@@ -1,5 +1,6 @@
 package cn.afternode.matrlib
 
+import cn.afternode.matrilib.core.nms.NMSProvider
 import cn.afternode.matrlib.utils.GitUtil
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -13,6 +14,15 @@ class MatrLib: JavaPlugin() {
     }
 
     lateinit var version: String
+
+    override fun onLoad() {
+        try {
+            NMSProvider.setup()
+        } catch (t: Throwable) {
+            logger.warning("Failed to load NMSProvider, some features will not work properly")
+            t.printStackTrace()
+        }
+    }
 
     override fun onEnable() {
         version = description.version

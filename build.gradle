@@ -9,6 +9,7 @@ allprojects {
 
     dependencies {
         implementation 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+        implementation 'io.netty:netty-buffer:4.1.89.Final'
     }
 
     repositories {
@@ -74,5 +75,6 @@ shadowJar {
         exclude(dependency('junit:junit'))
         exclude(dependency('org.hamcrest:hamcrest-library'))
         exclude(dependency('org.hamcrest:hamcrest-core'))
+        exclude(dependency('io.netty:netty-buffer:4.1.89.Final'))
     }
 }
