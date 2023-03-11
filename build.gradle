@@ -75,6 +75,7 @@ shadowJar {
         exclude(dependency('junit:junit'))
         exclude(dependency('org.hamcrest:hamcrest-library'))
         exclude(dependency('org.hamcrest:hamcrest-core'))
-        exclude(dependency('io.netty:netty-buffer:4.1.89.Final'))
+        exclude(dependency('io.netty:netty-buffer'))
+        exclude(dependency('io.netty:netty-common'))
     }
 }
